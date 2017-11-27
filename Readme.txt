@@ -12,24 +12,24 @@ Note - The entire question is given in Question.pdf
 Note:
  1. A, B are Lists.
  2. C is a element.
- 3. S is a list of elements in the Set. (Input format: List of elements)
- 4. R is the binary relation on the set S. (Input Format: List of 2-element lists)
+ 3. Set is a list of elements in the S as described in the question. (Input format: List of elements)
+ 4. Relation is the binary relation R as described in the question. (Input Format: List of 2-element lists)
  5. X is used to compute and return a value.
 
 member(C,A): Builtin to check whether C is a member of A.
 appendList(A,B,X): Appends A to B and returns them as X.
-validRelation(S,R): Checks whether all elements in R belong to S.
-transitiveCheck(R): Checks whether R is transitive.
-transitive(S,R): Checks whether R is valid over S and is transitive.
-closureCheck(R,X): Computes the transitive closure of the R and returns it as X.
-closure(S,R): Checks whether R is valid over S and prints transitive closure of R.
+validRelation(Set,Relation): Checks whether all elements in Relation belong to Set.
+transitiveCheck(Relation): Checks whether Relation is transitive.
+transitive(Set,Relation): Checks whether Relation is valid over Set and is transitive.
+closureCheck(Relation,X): Computes the transitive closure of the Relation and returns it as X.
+closure(Set,Relation): Checks whether Relation is valid over Set and prints transitive closure of Relation.
 
 ### Usage:
 1. Load the file answer.pl
         swipl answer.pl
-2. To check if a Relation R is transitive over a set S, type
-        transitive(S, R).
-3. To compute transitive closure of a Relation R, type
-        closure(S,R).
-4. To check whether a Relation R' is the transitive closure of Relation R, type
-        closureCheck(R,R').
+2. To check if a Relation is transitive over a set, type
+        transitive(Set, Relation).
+3. To compute transitive closure of a Relation, type
+        closure(Set,Relation).
+4. To check whether Relation2 is the transitive closure of Relation1, type
+        closureCheck(Relation1,Relation2).

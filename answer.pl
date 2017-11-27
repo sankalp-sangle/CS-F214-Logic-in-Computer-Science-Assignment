@@ -4,16 +4,16 @@
 appendList([],LIST,LIST).
 appendList([H|T],LIST,[H|LIST2]):- appendList(T,LIST,LIST2).
 
-validRelation(S,[]).
-validRelation(S,[[A,B]|T]):- member(A,S), member(B,S), validRelation(S,T).
+validRelation(Set,[]).
+validRelation(Set,[[A,B]|T]):- member(A,Set), member(B,Set), validRelation(Set,T).
 
-transitiveCheck(R):- not((member([A,B],R), member([B,C],R), not(member([A,C],R)))).
+transitiveCheck(Relation):- not((member([A,B],Relation), member([B,C],Relation), not(member([A,C],Relation)))).
 
-transitive(S,R):- not(validRelation(S,R)), print("Some elements in R don't belong in S"), !.
-transitive(S,R):- transitiveCheck(R).
+transitive(Set,Relation):- not(validRelation(Set,Relation)), print("Some elements in Relation don't belong in Set"), !.
+transitive(Set,Relation):- transitiveCheck(Relation).
 
-closureCheck(R,X):- member([A,B],R),member([B,C],R), not(member([A,C],R)), appendList(R,[[A,C]],Y), closureCheck(Y,X).
-closureCheck(R,X):- transitiveCheck(R), X = R.
+closureCheck(Relation,X):- member([A,B],Relation),member([B,C],Relation), not(member([A,C],Relation)), appendList(Relation,[[A,C]],Y), closureCheck(Y,X).
+closureCheck(Relation,X):- transitiveCheck(Relation), X = Relation.
 
-closure(S,R):- not(validRelation(S,R)), print("Some elements in R don't belong in S"), !.
-closure(S,R):- closureCheck(R,X), print(X).
+closure(Set,Relation):- not(validRelation(Set,Relation)), print("Some elements in Relation don't belong in Set"), !.
+closure(Set,Relation):- closureCheck(Relation,X), print(X).

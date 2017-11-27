@@ -1,0 +1,48 @@
+Rahul Bothra 2016A7PS0015P 
+Sankalp Sangle 2016A7PS0110P
+
+Sample inputs and outputs.
+
+1. To check whether a given Relation on a given Set is transitive.
+
+Input  :   ?- transitive([1,2,3,4],[[1,2],[2,3],[1,3]]).
+Output :   true.
+
+2. To check whether a given Relation on a given Set is transitive.
+
+Input  :   ?- transitive([1,2,3,4],[[1,2],[2,3],[1,4]]).
+Output :   false.
+
+3. To check whether a given Relation on a given Set is transitive, an invalid input being given.
+
+Input  :  ?- transitive([1,2,3,4],[[1,2],[2,3],[1,5]]).
+Output :  "Some elements in Relation don't belong in Set"
+          true.
+
+4. To compute closure of a given Relation on a given Set.
+
+Input  :  ?- closure([1,2,3,4],[[1,2],[2,3],[3,4]]).
+Output :  [[1,2],[2,3],[3,4],[1,3],[2,4],[1,4]]
+          true .
+
+5. To compute closure of a given Relation on a given Set, an invalid input being given.
+
+Input  :  ?- closure([1,2,3,4],[[1,2],[2,3],[3,5]]).
+Output :  "Some elements in Relation don't belong in Set"
+          true.
+
+6. To check whether a given Relation is a closure of another.
+
+Input  :  ?- closureCheck([[1,2],[2,3]],[[1,2],[2,3],[1,4]]).
+Output :  false.
+
+7. To check whether a given Relation is a closure of another.
+
+Input  :  ?- closureCheck([[1,2],[2,3]],[[1,2],[2,3],[1,3]]).
+Output :  true .
+
+8. To check whether a given Relation is a closure of another.
+
+Input  :  ?- closureCheck([[1,2],[2,3]],[[1,2],[2,3],[1,3],[1,4]]).
+Output :  false.
+

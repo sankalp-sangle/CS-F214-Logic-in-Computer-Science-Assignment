@@ -11,15 +11,25 @@ Note - The entire question is given in Question.pdf
 ### Predicates' Description:
 Note:
  1. A, B are Lists.
- 2. S is a list of elements in the Set.
- 3. R is the binary relation on the set S.
- 4. X is used to compute and return a value.
- 5. C is a element.
+ 2. C is a element.
+ 3. S is a list of elements in the Set. (Input format: List of elements)
+ 4. R is the binary relation on the set S. (Input Format: List of 2-element lists)
+ 5. X is used to compute and return a value.
 
-member(C,A):** Builtin to check whether an element C is a member of A.
-appendList(A,B,X): Appends lists A and B and returns them as X.
+member(C,A): Builtin to check whether C is a member of A.
+appendList(A,B,X): Appends A to B and returns them as X.
 validRelation(S,R): Checks whether all elements in R belong to S.
 transitiveCheck(R): Checks whether R is transitive.
-transitive(R,S): Checks whether R is over S and is transitive.
-closureCheck(R,X): Computes the transitive closure of the Relation R and returns it as X.
+transitive(S,R): Checks whether R is valid over S and is transitive.
+closureCheck(R,X): Computes the transitive closure of the R and returns it as X.
 closure(S,R): Checks whether R is valid over S and prints transitive closure of R.
+
+### Usage:
+1. Load the file answer.pl
+        swipl answer.pl
+2. To check if a Relation R is transitive over a set S, type
+        transitive(S, R).
+3. To compute transitive closure of a Relation R, type
+        closure(S,R).
+4. To check whether a Relation R' is the transitive closure of Relation R, type
+        closureCheck(R,R').

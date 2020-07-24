@@ -1,12 +1,13 @@
-# LiCS Assignment
+# CS F214 Logic in Computer Science Assignment
 ### Authors:
 Rahul Bothra 2016A7PS0015P<br>
 Sankalp Sangle 2016A7PS0110P
 
-### Problem Statement (Set 2):
-1. To check whether a given binary relation is transitive over a given set.
-2. To compute the transitive closure of a binary relation over a given set.<br>
-**Note** - The entire question is given in Question.pdf
+### Problem Statement:
+ 1. To check whether a given binary relation is transitive over a given set.
+ 2. To compute the transitive closure of a binary relation over a given set.<br>
+ 
+Additional details are given in Question.pdf
 
 ### Predicates' Description:
 **Note:**
